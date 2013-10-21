@@ -1,18 +1,22 @@
+What is this
+------------
+
 This is my resume (and CV) in LaTeX.
 
 Feel free to contact me if you have any questions or proposals.
 
-## Usage
+Building
+--------
 
 To build a PDF:
 
-	make
+	$ make
 
 To clean up all generated and intermediate content:
 
-	make clean
+	$ make clean
 
-## Requirements
+Requirements
+------------
 
-	texlive
-
+* texlive
