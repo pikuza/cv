@@ -1,0 +1,163 @@
+%based on the guide at http://www.cv-templates.info/2009/03/professional-cv-latex/
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{paralist}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[ Path = fonts/, BoldFont = Fontin-Bold, BoldItalicFont = Fontin-Bold, ItalicFont = Fontin-Italic, SmallCapsFont = Fontin-SmallCaps]{Fontin-Regular}
+%\setmainfont[Path = fonts/, BoldFont = LinLibertine_RB.otf, ItalicFont = LinLibertine_RI.otf, BoldItalicFont = LinLibertine_RBI.otf, SlantedFont = LinLibertine_aRL.otf, BoldSlantedFont = LinLibertine_aBL.otf, SmallCapsFont = LinLibertine_aS.otf, Mapping = tex-text]{LinLibertine_R.otf}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+  {\Huge Oleksandr \textsc{Pikuza}
+}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Origin:}   	& Chernihiv, Ukraine \\
+    \textsc{Date of birth:}    & July 14, 1988 \\
+    \textsc{Phone:}     & +380 63 1582832 \\
+    \textsc{Skype:}	& \href{skype:alexandro.cn.ua}{alexandro.cn.ua} \\
+    \textsc{email:}     & \href{mailto:oleksandr.pikuza@gmail.com}{oleksandr.pikuza@gmail.com} \\
+\end{tabular}
+
+%Section: Job Objective
+\section{Job Objective}
+Looking for Python developer position. Prefer remote job oportunities
+
+% Section: Summary
+% \section{Summary}
+% I'm a software engineer seeking a Python developer position in a reputable company that permits me to utilize my Programming skills and knowledge
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{rp{11cm}}
+
+  \textsc{May 2012 - Present} & \emph{Python developer / Team Lead} at \textbf{JBS}, Chernihiv\\
+  & \begin{compactitem}
+    \item \href{http://www.life.ua}{Life.ua}
+    \item \href{http://www.my.life.ua}{My.life.ua}
+    \item Online service for aggregation of restaurants, hotels, posters and billboards tagged by customer rating and feedbacks. Including search with complex conditions and social networks integration
+    \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+
+  \textsc{Oct. 2010 - May 2012} & \emph{Python developer / Team Lead} at \textbf{YuktiGroup}, Chernihiv\\
+  & \begin{compactitem}
+    \item \href{http://daozon.ru}{Daozon.ru} - B2b a trading platform where suppliers from China represent their goods for Russian business owners
+    \item \href{http://sambuka.me}{Sambuka.me} - Online service for ordering photo albums. Includes online editor for images/photos and API for offline integration 
+    \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+
+%  \textsc{Nov. 2009 - Mar. 2010} & \emph{System administrator} at \textbf{Elections of the President of Ukraine Jan 17, 2010}, District election commission of territorial election district \#208\\
+%  & \begin{compactitem}
+%    \item Installing, supporting, and maintaining computer system "Vyboru 2010" at election commission
+%    \item Providing data transfer about voting progress to Central election commission
+%    \end{compactitem}\vspace{-1em} \\
+% \multicolumn{2}{c}{} \\
+
+  \textsc{Dec. 2007 - Nov. 2008} & \emph{Software Developer} at \textbf{Softline}, Chernihiv\\ 
+  & \begin{compactitem} 
+    \item Software developer for financial system (reports, forms, scripts) of Ministry of finance of Ukraine. Using Oracle Hyperion Planning
+    \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Education
+\section{Education and trainings}
+\begin{tabular}{rl}
+2005 - 2010 & \textbf{Chernihiv State Technological University}, Chernihiv\\
+ & Qualification: Engineer of specialized computer systems (\textsc{Specialist degree})
+\end{tabular}
+
+%Section: Certificates
+\section{Certificates}
+\begin{tabular}{rl}
+Oct. 2012 - Dec. 2012 & \textbf{M101}, MongoDB for Developers\\
+ & \href{https://s3.amazonaws.com/edu-cert.10gen.com/downloads/8381fb4e8cff46cc82353a3ecea5a070/Certificate.pdf}{Certificate} \\
+\end{tabular}
+
+\section{Programming Languages and Frameworks}
+\begin{tabular}{r|p{11cm}}
+\multicolumn{2}{c}{} \\
+Python / Django & The main language which I'm using in work process, above all in web-development (with Django framework) but also in programming watchdogs, scripts for deploying/updating servers.\\
+\multicolumn{2}{c}{} \\
+JavaScript & Commonly used in work process. I understand what's going on, trying to learn it in deep in my own time. I can maintain existing code and make changes in it.   \\
+\multicolumn{2}{c}{} \\
+Ruby / RoR & Fluent knowledge. But to learn it is interesting for me. Use mainly for funny/pet projects. \\
+\multicolumn{2}{c}{} \\
+Lisp & It's my goal \#1 to learn it. Once I liked its ideology "Programmable programming language". Every time I face it - like more and more. \\
+\end{tabular}
+
+\section{Platforms and Technologies}
+\begin{tabular}{r|p{11cm}}
+\multicolumn{2}{c}{} \\
+Linux / Unix & Extensive using of Linux both for personal and enterprise use \\
+ & (distributions: RHEL, CentOS, Ubuntu). Also MacOS X for personal use at laptop \\
+\multicolumn{2}{c}{} \\
+Libraries & FeinCMS, Jinja, Celery, South, Haystack \\
+\multicolumn{2}{c}{} \\
+Databases & MySQL, PostrgreSQL, MongoDB, Redis \\
+\multicolumn{2}{c}{} \\
+Deplyment & Vagrant, Puppet, Fabric, Jenkins \\
+\multicolumn{2}{c}{} \\
+Bug tracking & Jira, Basecamp, Redmine \\
+\multicolumn{2}{c}{} \\
+Revision Control & Used CVS at University, SVN both at University and work,  Git at work, \\
+ & have been using Mercurial for the last 2 years whenever possible \\
+\end{tabular}
+
+% Section: Certificates
+% \section{Certificates}
+% \begin{tabular}{rl}
+% Oct. 2012 - Dec. 2012 & \textbf{M101}, MongoDB for Developers\\
+%  & \href{https://s3.amazonaws.com/edu-cert.10gen.com/downloads/8381fb4e8cff46cc82353a3ecea5a070/Certificate.pdf}{Certificate} \\	
+% \end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+Ukrainian & mothertongue \\
+Russian & mothertongue \\
+English & proficient \\
+\end{tabular}
+
+\section{Interests and Activities}
+% some text
+\end{document}
